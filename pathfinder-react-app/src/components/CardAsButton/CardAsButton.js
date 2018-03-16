@@ -18,7 +18,7 @@ class CardAsButton extends Component {
     render() {
         const CardLayout = () => <Card>
             <CardHeader>
-              title="Title is {this.props.title}" subtitle="get my memes"
+              title="Title is {this.props.title}" subtitle={this.props.subtitle}
             </CardHeader>
             <CardMedia >
               <img src={this.props.image} alt="" />

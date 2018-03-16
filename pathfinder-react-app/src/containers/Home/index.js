@@ -18,20 +18,20 @@ class Home extends Component {
   render() {
     return (
       <div className="Home">
-        <TopBar />
+        {/* <TopBar /> */}
         <IndexBanner />
         {/* Below returns a material-ui grid, passes in Card Button Components as props, You can add anything in here and it''ll resize */}
         <GridHome gridContent={[
             <CardAsButton subtitle="insert subtitle here" title="RUN THE ASSESSMENT QUESTIONNAIRE" link="http://pathtest-pathfinder.6923.rh-us-east-1.openshiftapps.com/" image={questionnaire} />,
-            <CardAsButton subtitle="insert subtitle here" title="RESULTS" link="/Memes" image="https://www.computing.co.uk/w-images/57a163e3-9c1c-4ff0-b52e-e893c1138628/3/RedHatlogo470313-580x358.jpg"/>,
+            <CardAsButton subtitle="insert subtitle here" title="RESULTS" link="/Results" image="https://www.computing.co.uk/w-images/57a163e3-9c1c-4ff0-b52e-e893c1138628/3/RedHatlogo470313-580x358.jpg"/>,
             <CardAsButton subtitle="insert subtitle here" title="ADMINISTRATION" link="https://www.google.co.uk/search?q=mesut+ozil&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjXua2wqu7ZAhUGaRQKHU0gDagQ_AUICygC&biw=950&bih=907" />,
             <h1>AAAHH</h1>
         ]}
             
         />
         <CTA />
-        <Bubble />
-        <ComboChart />
+        {/* <Bubble /> */}
+        {/* <ComboChart /> */}
       </div>
     );
   }

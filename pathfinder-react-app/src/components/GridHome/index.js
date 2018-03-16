@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Grid from "material-ui-next/Grid";
-import Paper from "material-ui-next/Paper";
+// import Paper from "material-ui-next/Paper";
 
 class GridHome extends Component {
     render() {
