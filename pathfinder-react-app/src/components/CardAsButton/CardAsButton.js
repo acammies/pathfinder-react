@@ -7,42 +7,42 @@ import {CardActions} from 'material-ui/Card';
 import {CardMedia} from 'material-ui/Card';
 import {CardTitle} from 'material-ui/Card';
 import {CardText} from 'material-ui/Card';
+import { Link } from "react-router-dom";
+
 // import {Card} from 'material-ui/Card';
 // import { CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 
 class CardAsButton extends Component {
+
+    
     render() {
+        const CardLayout = () => <Card>
+            <CardHeader>
+              title="Title is {this.props.title}" subtitle="get my memes"
+            </CardHeader>
+            <CardMedia >
+              <img src={this.props.image} alt="" />
+            </CardMedia>
+            <h1>{this.props.title}</h1>
+            <h2>{this.props.subtitle}</h2>
+          </Card>;
+
+
+
         return (
             <div className="cardStyle">
-                <Card>
-                    <CardHeader>
-                        title="Title is {this.props.name}"
-                        subtitle="get my memes"
-                    </CardHeader>
-                    <Button variant="raised" color="secondary" href={this.props.link}>
-                        Hello {this.props.name}!
-                    </Button>
-
-                </Card>
-                {/* <Card>
-                    <CardHeader
-                        title="URL Avatar"
-                        subtitle="Subtitle"
-                    />
-                    <CardTitle title="Card title" subtitle="Card subtitle" />
-                    <CardText>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-                        Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-                        Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
-                    </CardText>
-                    <CardActions>
-                        <Button label="Action1" />
-                        <Button label="Action2" />
-                    </CardActions>
-                </Card> */}
-            </div>
-        );
+                {/^https?:\/\//.test(this.props.link) ? 
+                    <a href={this.props.link}>
+                        <CardLayout/>
+                    </a>  
+                : 
+                    <Link to={this.props.link}>
+                        <CardLayout/>
+                    </Link>
+                }
+                    
+                </div>
+        )
     };
 };
 
